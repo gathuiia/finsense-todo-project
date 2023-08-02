@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## To-do Application
+This is a basic to-do task application that uses a React frontend and a Rails backend.
 
-Things you may want to cover:
+### Backend Description
+***describe backend
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Frontend Description
+***describe frontend
