@@ -1,5 +1,6 @@
 import React from "react";
 import TaskWrapper from "./components/TaskWrapper";
+import './App.css'
 
 function App() {
   
