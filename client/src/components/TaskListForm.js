@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function TaskListForm(addList) {
-    const [value, setValue] = useState('');
+    const [list, setList] = useState('');
+    const [newListName, setNewListName] = useState('');
 
-    const handleSubmit = function(e) {
-
+    const handleSubmitList = async(e) => {
         e.preventDefault();
-        if (value){
-            addList(value);
-            console.log(value)
-            setValue('');
+        try {
+            const response = await axios.post('../app/controllers/task_lists_controller.rb', { name: newListName });
+            setList([...list, response.data]);
+            setNewListName('');
+        } catch(error) {
+            console.error('Error creating task list:', error);
         }
-
     };
-    
+        
     return (
-        <form onSubmit={handleSubmit} className='ListForm'>
-            <input type='text' value={value} onChange={(e) => setValue(e.target.value)} className='task-input' placeholder='New Task List'/>
+        <form onSubmit={handleSubmitList} className='ListForm'>
+            <input type='text' value={newListName} onChange={(e) => setNewListName(e.target.value)} className='task-input' placeholder='New Task List'/>
             <button type='submit' className='task-btn'>Add List</button>
         </form>
     )
