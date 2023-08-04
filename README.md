@@ -18,7 +18,7 @@ Tasks - children to the task lists that contain the checklist of items related t
 They were created using:
 ```
 $ rails generate model TaskList name:string --no-test-framework
-$ rails generate model Task description:string --no-test-framework
+$ rails generate model Task description:string is_complete:boolean --no-test-framework
 ```
 Each of these models have their respective resources - the controller (for the CRUD), and serializer (for the id element):
 ```

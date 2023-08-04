@@ -5,7 +5,7 @@ import TaskListForm from './TaskListForm';
 
 function TaskWrapper() {
     return (
-        <div>
+        <div className='wrapper'>
             <TaskListForm />
             <TaskForm />
         </div>
