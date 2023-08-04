@@ -17,7 +17,7 @@ function TaskListForm(addList) {
     };
         
     return (
-        <form onSubmit={handleSubmitList} className='ListForm'>
+        <form onSubmit={handleSubmitList} className='TaskForm'>
             <input type='text' value={newListName} onChange={(e) => setNewListName(e.target.value)} className='task-input' placeholder='New Task List'/>
             <button type='submit' className='task-btn'>Add List</button>
         </form>

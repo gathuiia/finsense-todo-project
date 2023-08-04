@@ -6,6 +6,7 @@ function App() {
   
   return (
     <div className="App">
+      <h1 className="task-title">To-Do</h1>
       <TaskWrapper/>
     </div>
   );
