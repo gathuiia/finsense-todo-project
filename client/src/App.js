@@ -1,16 +1,34 @@
 import React from "react";
+import { styled } from "styled-components";
 import TaskWrapper from "./components/TaskWrapper";
-import './App.css'
-import Task from "./components/Task";
+// import Task from "./components/Task";
+
+// import './App.css'
 
 function App() {
 
   return (
-    <div className="App">
-      <h1 className="task-title">To-Do</h1>
-      <TaskWrapper />
-    </div>
+    <>
+      <AppTag>
+        <AppTitle> Get things Done! </AppTitle>
+        <TaskWrapper />
+      </AppTag>
+    </>
   );
 }
 
 export default App;
+
+const AppTitle = styled.h1`
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+`
+
+const AppTag = styled.div`
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #212121;
+
+`
