@@ -56,6 +56,7 @@ function TaskWrapper() {
 
     return (
         <div>
+            <AppTitle> Get things Done! </AppTitle>
             <WrapperTag>
                 <TaskListForm addList={addList} />
                 {/* Displaying Lists */}
@@ -92,5 +93,19 @@ function TaskWrapper() {
 export default TaskWrapper
 
 const WrapperTag = styled.div`
-    
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
+const AppTitle = styled.h1`
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+`
+
+

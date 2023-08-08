@@ -19,8 +19,8 @@ function TaskForm() {
 
     return (
         <form onSubmit={handleSubmitTask} className='TaskForm'>
-            <InputTag><input type='text' value={newTaskName} onChange={(e) => setNewTaskName(e.target.value)} placeholder='New Task'></input></InputTag>
-            <BtnTag><button type='submit'>Add Task</button></BtnTag>
+            <InputTag type='text' value={newTaskName} onChange={(e) => setNewTaskName(e.target.value)} placeholder='New Task' />
+            <BtnTag type='submit'>Add Task</BtnTag>
         </form>
 
     )

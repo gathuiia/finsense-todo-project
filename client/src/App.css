@@ -7,11 +7,11 @@
   align-items: center;
 }
 
-.TaskForm{
+.TaskForm {
   width: 100%;
 }
 
-.task-title{
+.task-title {
   font-size: 50px;
   text-align: center;
   color: #fff;
@@ -33,5 +33,5 @@
   color: #fff;
   border: none;
   padding: 0.55rem;
-  cursor: pointer;  
+  cursor: pointer;
 }

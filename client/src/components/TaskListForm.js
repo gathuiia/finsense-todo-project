@@ -19,9 +19,9 @@ function TaskListForm() {
 
     return (
         <>
-            <form onSubmit={handleSubmitList} className='TaskForm'>
-                <input type='text' value={newListName} onChange={(e) => setNewListName(e.target.value)} className='task-input' placeholder='New Task List' />
-                <button type='submit' className='task-btn'>Add List</button>
+            <form onSubmit={handleSubmitList}>
+                <InputTag type='text' value={newListName} onChange={(e) => setNewListName(e.target.value)} placeholder='New Task List' />
+                <BtnTag type='submit'>Add List</BtnTag>
 
             </form>
         </>
@@ -30,6 +30,21 @@ function TaskListForm() {
 
 export default TaskListForm
 
-// const CustomTag = styled.div`
+const InputTag = styled.input`
+    outline: none;
+    background: none;
+    border: 1px solid #a51b31;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #fff;
+`
 
-// `
+const BtnTag = styled.button`
+    background: #a51b31;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer; 
+`
