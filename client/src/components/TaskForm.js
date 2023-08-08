@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { styled } from 'styled-components';
 
 function TaskForm() {
     const [task, setTask] = useState('');
@@ -18,11 +19,30 @@ function TaskForm() {
 
     return (
         <form onSubmit={handleSubmitTask} className='TaskForm'>
-            <input type='text' value={newTaskName} onChange={(e) => setNewTaskName(e.target.value)} className='task-input' placeholder='New Task'></input>
-            <button type='submit' className='task-btn'>Add Task</button>
+            <InputTag><input type='text' value={newTaskName} onChange={(e) => setNewTaskName(e.target.value)} placeholder='New Task'></input></InputTag>
+            <BtnTag><button type='submit'>Add Task</button></BtnTag>
         </form>
 
     )
 }
 
 export default TaskForm
+
+const InputTag = styled.input`
+    outline: none;
+    background: none;
+    border: 1px solid #a51b31;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #fff;
+`
+
+const BtnTag = styled.button`
+    background: #a51b31;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer; 
+`
